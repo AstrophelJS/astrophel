@@ -1,16 +1,16 @@
 # Astrophel Js
+> Made with create-react-library
+
+[![NPM](https://img.shields.io/npm/v/astrophel.svg)](https://www.npmjs.com/package/astrophel) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Astrophel js is an open source framework that built on top of React Js, one of React Js variant that act as 3D Web development framework to create AR/VR, Game, PWA/TWA on the Web that uses Recoil Js and Aframe Js as the core dependancies.
 
 Contribution is welcome.
-
----
-
 ## Install
 
-    $ npm install astrophel --save
-
-    
+```bash
+npm install --save astrophel
+```
 
 ## CLI
 
@@ -20,6 +20,43 @@ $ npm install -g astrophel-cli
 $ astrophel create
 ```
 
+## Usage
+
+```jsx
+import React, { Component } from 'react'
+
+import MyComponent from 'astrophel'
+import 'astrophel/dist/index.css'
+
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
+```
+---
+## Scene State Management
+
+```js
+
+import { GlobalStates } from "astrophel";
+
+// to get data
+const { data } = GlobalStates(‘data’, {} );
+
+// to set data
+const { setData } = GlobalStates(‘data’, {} );
+setData(someData);
+```
+
+where
+
+```js
+
+const { <keyStateName> } = GlobalStates(<keyStateName>, <keyDefaultValue> );
+```
+
+----
 ## Requirements
 
 For development, you will only need Node.js and a node global package installed in your environement.
@@ -54,23 +91,6 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ---
 
-## Global State Management
+## License
 
-```js
-
-import { GlobalStates } from "astrophel";
-
-// to get data
-const { data } = GlobalStates(‘data’, {} );
-
-// to set data
-const { setData } = GlobalStates(‘data’, {} );
-setData(someData);
-```
-
-where
-
-```js
-
-const { <keyStateName> } = GlobalStates(<keyStateName>, <keyDefaultValue> );
-```
+MIT © [retzd-tech](https://github.com/retzd-tech)
