@@ -21,3 +21,10 @@ coverage
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+preview/package.json
+preview/yarn.lock
+preview/public/Assets/index.js
+preview/public/Assets/Images/space.jpeg
+preview/src/App.js
+preview/src/App.js
+preview/src/App.js

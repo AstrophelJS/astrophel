@@ -16,7 +16,7 @@
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
-    "test": "run-s test:unit test:lint test:build",
+    "test": "jest --coverage",
     "test:build": "run-s build",
     "test:lint": "eslint . --fix",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
@@ -27,8 +27,17 @@
   "peerDependencies": {
     "react": "^16.0.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "recoil": "^0.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "aframe": "^1.2.0",
+    "aframe-particle-system-component": "^1.1.3",
+    "aframe-react": "^4.4.0",
+    "aframe-text-geometry-component": "^0.5.1"
+  },
+  "devDependencies": {
     "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
@@ -42,9 +51,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
     "npm-run-all": "^4.1.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
