@@ -1,10 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import { ExampleComponent } from 'astrophel'
-import 'astrophel/dist/index.css'
+import Astrophel from "astrophel";
+import "astrophel/dist/index.css";
+
+const { Sky, Scene } = Astrophel;
+
+const content = <Sky image="Assets/Images/space.jpeg" />;
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return <Scene content={content} />;
+};
 
-export default App
+export default App;
