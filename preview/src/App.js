@@ -1,14 +1,25 @@
 import React from "react";
-
 import Astrophel from "astrophel";
-import "astrophel/dist/index.css";
 
-const { Sky, Scene } = Astrophel;
+const { Sky, Scene, AstrophelRoot, Camera, Image } = Astrophel;
 
-const content = <Sky image="Assets/Images/space.jpeg" />;
+const content = (
+  <>
+    <Camera />
+    <Image image="Assets/Images/astrophel-title.png"/>
+    <Sky
+      image="Assets/Images/space.jpeg"
+      rotating={{ angle: 360, duration: 100000 }}
+    />
+  </>
+);
 
 const App = () => {
-  return <Scene content={content} />;
+  return (
+    <AstrophelRoot>
+      <Scene content={content} />
+    </AstrophelRoot>
+  );
 };
 
 export default App;
